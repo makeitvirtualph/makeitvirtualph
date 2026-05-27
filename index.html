@@ -1,3 +1,4 @@
+Makeitvirtualph · HTML
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,18 +17,18 @@
     --white:   #fff;
     --shadow:  rgba(90,62,62,.10);
   }
-
+ 
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
+ 
   html { scroll-behavior: smooth; }
-
+ 
   body {
     font-family: 'DM Sans', sans-serif;
     background: var(--cream);
     color: var(--mocha);
     overflow-x: hidden;
   }
-
+ 
   /* ── NAV ── */
   nav {
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
@@ -49,7 +50,7 @@
     transition: color .25s;
   }
   .nav-links a:hover { color: var(--rose); }
-
+ 
   /* ── HERO ── */
   .hero {
     min-height: 100vh;
@@ -141,7 +142,7 @@
     from { opacity:0; transform: translateY(24px); }
     to   { opacity:1; transform: translateY(0); }
   }
-
+ 
   /* ── SECTIONS SHARED ── */
   section { padding: 6rem 2rem; }
   .section-label {
@@ -161,13 +162,14 @@
     max-width: 540px;
   }
   .container { max-width: 1080px; margin: 0 auto; }
-
+ 
   /* ── ABOUT ── */
   .about {
     background: #fff;
   }
   .about-inner {
-    display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center;
+    display: grid; grid-template-columns: 1fr; gap: 5rem; align-items: center;
+    max-width: 680px;
   }
   .about-image-wrap {
     position: relative;
@@ -200,7 +202,7 @@
     font-size: .75rem; font-weight: 600; letter-spacing: .06em;
     padding: .3rem .85rem; border-radius: 50px;
   }
-
+ 
   /* ── SERVICES ── */
   .services { background: var(--cream); }
   .services-header { text-align: center; margin-bottom: 3.5rem; }
@@ -241,7 +243,7 @@
     list-style: none; display: flex; align-items: center; gap: .5rem;
   }
   .service-list li::before { content: '✦'; color: var(--rose); font-size: .6rem; }
-
+ 
   /* ── TOOLS ── */
   .tools { background: var(--mocha); color: #fff; text-align: center; }
   .tools .section-label { color: var(--blush); }
@@ -258,7 +260,7 @@
     transition: background .2s, border-color .2s;
   }
   .tool-pill:hover { background: rgba(201,120,138,.35); border-color: var(--rose); }
-
+ 
   /* ── TESTIMONIALS ── */
   .testimonials { background: #fff; }
   .testimonials-header { text-align: center; margin-bottom: 3.5rem; }
@@ -290,7 +292,7 @@
   .testi-name { font-weight: 600; font-size: .88rem; color: var(--mocha); }
   .testi-role { font-size: .78rem; color: var(--taupe); }
   .stars { color: #e8a87c; font-size: .85rem; margin-bottom: .15rem; }
-
+ 
   /* ── PROCESS ── */
   .process { background: var(--cream); }
   .process-inner {
@@ -330,7 +332,7 @@
     font-style: italic; color: var(--taupe); font-size: 1.15rem; line-height: 1.6;
     max-width: 280px;
   }
-
+ 
   /* ── CTA STRIP ── */
   .cta-strip {
     background: linear-gradient(135deg, var(--rose) 0%, #b5697a 100%);
@@ -350,7 +352,7 @@
   .cta-strip p { font-size: 1rem; opacity: .85; margin-bottom: 2.2rem; max-width: 440px; margin-left:auto;margin-right:auto; }
   .btn-white { background: #fff; color: var(--rose); }
   .btn-white-outline { background: transparent; color: #fff; border: 1.5px solid rgba(255,255,255,.6); }
-
+ 
   /* ── CONTACT ── */
   .contact { background: #fff; }
   .contact-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
@@ -378,7 +380,7 @@
   }
   .form-group textarea { resize: vertical; min-height: 120px; }
   .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-
+ 
   /* ── FOOTER ── */
   footer {
     background: var(--mocha); color: rgba(255,255,255,.7);
@@ -397,7 +399,7 @@
   .footer-links a { color: rgba(255,255,255,.6); text-decoration: none; font-size: .82rem; transition: color .2s; }
   .footer-links a:hover { color: #fff; }
   .footer-copy { font-size: .78rem; opacity: .45; }
-
+ 
   /* ── RESPONSIVE ── */
   @media(max-width:860px) {
     nav { padding: 1rem 1.5rem; }
@@ -416,7 +418,7 @@
 </style>
 </head>
 <body>
-
+ 
 <!-- NAV -->
 <nav>
   <div class="nav-logo">Make It Virtual PH</div>
@@ -424,11 +426,10 @@
     <a href="#about">About</a>
     <a href="#services">Services</a>
     <a href="#process">Process</a>
-    <a href="#testimonials">Testimonials</a>
     <a href="#contact">Contact</a>
   </div>
 </nav>
-
+ 
 <!-- HERO -->
 <section class="hero" id="home">
   <div class="hero-petal"></div>
@@ -454,34 +455,24 @@
     scroll
   </div>
 </section>
-
+ 
 <!-- ABOUT -->
 <section class="about" id="about">
   <div class="container about-inner">
-    <div class="about-image-wrap">
-      <div class="about-img-placeholder">
-        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="32" cy="20" r="12" stroke="#c9788a" stroke-width="2"/>
-          <path d="M8 56c0-13.255 10.745-24 24-24s24 10.745 24 24" stroke="#c9788a" stroke-width="2" stroke-linecap="round"/>
-        </svg>
-        <span>Your VA Photo Here</span>
-      </div>
-      <div class="about-badge">
-        <span>2+</span>
-        <span>Years of Service</span>
-      </div>
-    </div>
     <div class="about-text">
       <div>
         <div class="section-label">About Me</div>
         <h2 class="section-title">Hi, I'm Your <em>Virtual Partner</em></h2>
+        <div style="display:inline-flex;align-items:center;gap:.5rem;background:var(--blush);color:var(--rose);border-radius:50px;padding:.35rem 1rem;font-size:.8rem;font-weight:600;margin-top:.6rem;">
+          ✦ 6+ Years of Service
+        </div>
       </div>
       <p>
         I'm a Philippines-based virtual assistant with a passion for helping female entrepreneurs
         and small business owners reclaim their time and grow their brands with confidence.
       </p>
       <p>
-        I believe every boss lady deserves a reliable, detail-oriented partner behind the scenes —
+        I believe every emboldened woman deserves a reliable, detail-oriented partner behind the scenes —
         someone who treats your business like it's their own. That's exactly what I bring to the table.
       </p>
       <div class="tag-row">
@@ -494,7 +485,7 @@
     </div>
   </div>
 </section>
-
+ 
 <!-- SERVICES -->
 <section class="services" id="services">
   <div class="container">
@@ -545,18 +536,17 @@
           <li>Product listing & updates</li>
           <li>Order tracking & customer replies</li>
           <li>Inventory management</li>
-          <li>Basic store setup</li>
         </ul>
       </div>
       <div class="service-card">
         <div class="service-icon">✍️</div>
-        <h3>Content & Copywriting</h3>
-        <p>Words that connect and convert — from blog posts to newsletters to website copy.</p>
+        <h3>Newsletter Writing</h3>
+        <p>Engaging, on-brand email newsletters that keep your audience connected and coming back for more.</p>
         <ul class="service-list">
-          <li>Blog posts & articles</li>
-          <li>Email newsletters</li>
-          <li>Website copy editing</li>
-          <li>Product descriptions</li>
+          <li>Newsletter copywriting</li>
+          <li>Subject line optimization</li>
+          <li>Audience-focused storytelling</li>
+          <li>Scheduling & sending support</li>
         </ul>
       </div>
       <div class="service-card">
@@ -573,7 +563,7 @@
     </div>
   </div>
 </section>
-
+ 
 <!-- TOOLS -->
 <section class="tools">
   <div class="container">
@@ -599,9 +589,9 @@
     </div>
   </div>
 </section>
-
+ 
 <!-- TESTIMONIALS -->
-<section class="testimonials" id="testimonials">
+<section class="testimonials" id="testimonials" style="display:none;">
   <div class="container">
     <div class="testimonials-header">
       <div class="section-label">Client Love</div>
@@ -644,7 +634,7 @@
     </div>
   </div>
 </section>
-
+ 
 <!-- PROCESS -->
 <section class="process" id="process">
   <div class="container process-inner">
@@ -693,7 +683,7 @@
     </div>
   </div>
 </section>
-
+ 
 <!-- CTA STRIP -->
 <section class="cta-strip">
   <div style="position:relative;z-index:2;">
@@ -701,11 +691,11 @@
     <p>Stop doing it all alone. Let's talk about how I can support your business and your dreams.</p>
     <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
       <a href="#contact" class="btn btn-white">Get In Touch</a>
-      <a href="mailto:hello@makeitvirtualph.com" class="btn btn-white-outline">Email Me Directly</a>
+      <a href="mailto:makeitvirtualph@gmail.com" class="btn btn-white-outline">Email Me Directly</a>
     </div>
   </div>
 </section>
-
+ 
 <!-- CONTACT -->
 <section class="contact" id="contact">
   <div class="container contact-inner">
@@ -725,14 +715,14 @@
           <div class="contact-icon">⏰</div>
           <div>
             <h4>Working Hours</h4>
-            <p>Mon–Fri, 8 AM – 6 PM PHT</p>
+            <p>Flexible — based on your needs & timezone</p>
           </div>
         </div>
         <div class="contact-item">
           <div class="contact-icon">📩</div>
           <div>
             <h4>Email</h4>
-            <p>hello@makeitvirtualph.com</p>
+            <p>makeitvirtualph@gmail.com</p>
           </div>
         </div>
         <div class="contact-item">
@@ -744,45 +734,45 @@
         </div>
       </div>
     </div>
-    <div class="contact-form">
+    <form class="contact-form" action="https://formspree.io/f/makeitvirtualph@gmail.com" method="POST">
       <div class="form-row">
         <div class="form-group">
           <label>First Name</label>
-          <input type="text" placeholder="Ana" />
+          <input type="text" name="first_name" placeholder="Ana" required />
         </div>
         <div class="form-group">
           <label>Last Name</label>
-          <input type="text" placeholder="Reyes" />
+          <input type="text" name="last_name" placeholder="Reyes" required />
         </div>
       </div>
       <div class="form-group">
         <label>Email Address</label>
-        <input type="email" placeholder="ana@yourbusiness.com" />
+        <input type="email" name="email" placeholder="ana@yourbusiness.com" required />
       </div>
       <div class="form-group">
         <label>Service I'm Interested In</label>
-        <select>
+        <select name="service">
           <option value="">Select a service…</option>
           <option>Email & Calendar Management</option>
           <option>Social Media Management</option>
           <option>Canva Design Support</option>
           <option>E-Commerce Support</option>
-          <option>Content & Copywriting</option>
+          <option>Newsletter Writing</option>
           <option>Admin & Research Tasks</option>
           <option>Custom Package</option>
         </select>
       </div>
       <div class="form-group">
         <label>Tell Me About Your Business</label>
-        <textarea placeholder="What does your business do, and what tasks are overwhelming you right now?"></textarea>
+        <textarea name="message" placeholder="What does your business do, and what tasks are overwhelming you right now?"></textarea>
       </div>
-      <button class="btn btn-primary" style="width:100%;font-size:.9rem;padding:1rem;" onclick="alert('Thank you! I\'ll be in touch within 24 hours. 🌸')">
+      <button type="submit" class="btn btn-primary" style="width:100%;font-size:.9rem;padding:1rem;">
         Send Message ✦
       </button>
-    </div>
+    </form>
   </div>
 </section>
-
+ 
 <!-- FOOTER -->
 <footer>
   <div class="footer-inner">
@@ -799,7 +789,7 @@
     <div class="footer-copy">© 2025 Make It Virtual PH. All rights reserved.</div>
   </div>
 </footer>
-
+ 
 <script>
   // Smooth reveal on scroll
   const revealEls = document.querySelectorAll('.service-card, .testi-card, .step, .contact-item');
@@ -818,5 +808,20 @@
     io.observe(el);
   });
 </script>
+<!-- WHATSAPP FLOATING BUTTON -->
+<a href="https://wa.me/message/KR4E4ULSATYWB1" target="_blank" rel="noopener" aria-label="Chat on WhatsApp" style="
+  position:fixed;bottom:1.8rem;right:1.8rem;z-index:999;
+  width:58px;height:58px;border-radius:50%;
+  background:#25D366;color:#fff;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 6px 24px rgba(37,211,102,.45);
+  transition:transform .2s,box-shadow .2s;text-decoration:none;"
+  onmouseover="this.style.transform='scale(1.1)'"
+  onmouseout="this.style.transform='scale(1)'">
+  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="white">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+</a>
+ 
 </body>
 </html>
